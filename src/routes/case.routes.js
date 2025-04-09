@@ -1,8 +1,11 @@
 const express = require('express');
 const router = express.Router();
 
+// Middlewares de segurança e controle de acesso
 const authMiddleware = require('../middlewares/auth.middleware');
 const roleCheck = require('../middlewares/roleCheck.middleware');
+
+// Controller que contém as funções que fazem o trabalho real (CRUD dos casos)
 const caseController = require('../controllers/case.controller');
 
 // Criar novo caso - admin e perito
