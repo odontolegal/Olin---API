@@ -1,28 +1,55 @@
 const mongoose = require('mongoose');
 
 const evidenceSchema = new mongoose.Schema({
+  titulo: {
+    type: String,
+    required: true
+  },
   descricao: {
     type: String,
     required: true
   },
-  tipo: {
+  localColeta: {
     type: String,
-    enum: ['imagem', 'documento', 'objeto', 'outro'],
-    default: 'outro'
+    required: true
+  },
+  dataColeta: {
+    type: Date,
+    required: true
   },
   criadoEm: {
     type: Date,
     default: Date.now
+  },
+  tipoArquivo: {
+    type: String,
+    enum: ['imagem', 'documento'],
+    required: true
+  },
+  arquivo: {
+    type: String, // Caminho ou URL do arquivo
+    required: true
   },
   caso: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Case',
     required: true
   },
-  autor: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'User',
-    required: true
+  criadoPor: {
+    id: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User',
+      required: true
+    },
+    name: {
+      type: String,
+      required: true
+    },
+    perfil: {
+      type: String,
+      enum: ['Admin', 'Perito', 'Assistente'],
+      required: true
+    }
   }
 });
 

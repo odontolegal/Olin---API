@@ -20,7 +20,7 @@ const userRoutes = require('./routes/user.routes'); // Cadastro, update e listag
 const caseRoutes = require('./routes/case.routes'); // Gerenciamento de casos (CRUD)
 const evidenceRoutes = require('./routes/evidence.routes'); // Gerenciamento de evidências
 const laudoRoutes = require('./routes/laudo.routes'); // Gerenciamento de laudos
-
+const relatorioRoutes = require('./routes/relatorio.routes'); // criação do relatório final
 // Inicializa a aplicação Express
 const app = express();
 
@@ -49,6 +49,7 @@ app.use('/api', userRoutes); // /api/usuarios
 app.use('/api/casos', caseRoutes); // /api/casos
 app.use('/api/evidencias', evidenceRoutes); // /api/evidencias
 app.use('/api/laudos', laudoRoutes); // /api/laudos
+app.use('/api/relatorios', relatorioRoutes); // /api/relatorio
 
 // Exporta o app para ser usado em outro arquivo
 module.exports = app;

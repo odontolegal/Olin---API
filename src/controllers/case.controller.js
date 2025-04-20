@@ -3,13 +3,14 @@ const Case = require('../models/case.model');
 // Cria um novo caso
 exports.createCase = async (req, res) => {
   try {
-    const { titulo, descricao, data, peritoResponsavel } = req.body;
+    const { titulo, descricao, data, peritoResponsavel, localDoCaso } = req.body;
 
     const novoCaso = new Case({
       titulo,
       descricao,
       data,
       peritoResponsavel,
+      localDoCaso,
       criadoPor: req.user.id // quem criou o caso (admin ou perito)
     });
 
@@ -64,6 +65,7 @@ exports.updateCase = async (req, res) => {
     if (data) atualizacoes.data = data;
     if (status) atualizacoes.status = status;
     if (peritoResponsavel) atualizacoes.peritoResponsavel = peritoResponsavel;
+    if (localDoCaso) atualizacoes.localDoCaso = localDoCaso;
 
     const casoAtualizado = await Case.findByIdAndUpdate(id, atualizacoes, {
       new: true,

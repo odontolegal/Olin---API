@@ -13,7 +13,7 @@ const caseSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
     required: true
-  }
+  },
+  localDoCaso: { type: String, required: true }
 });
-
 module.exports = mongoose.model('Case', caseSchema);

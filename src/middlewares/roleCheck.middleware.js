@@ -1,9 +1,10 @@
-module.exports = (rolesPermitidos = []) => { // Aqui vamos verificar quais acessos cada usuário vai ter
+module.exports = (rolesPermitidos = []) => {
   return (req, res, next) => {
-    const role = req.user?.role;
+    const userRole = req.user.perfil.toLowerCase(); // 🔥 força lowercase
+    const roles = rolesPermitidos.map(r => r.toLowerCase()); // 🔥 compara certo
 
-    if (!rolesPermitidos.includes(role)) {
-      return res.status(403).json({ message: 'Acesso não autorizado' });
+    if (!roles.includes(userRole)) {
+      return res.status(403).json({ message: 'Acesso negado. Permissão insuficiente.' });
     }
 
     next();
