@@ -1,12 +1,12 @@
-🦷 Odonto Legal - API
+# 🦷 Odonto Legal - API
 Odonto Legal é uma API RESTful desenvolvida em Node.js com Express, voltada para o gerenciamento de processos odontológicos como casos clínicos, laudos, relatórios e evidências. A aplicação também oferece controle de acesso baseado em funções (roles), autenticação segura e modularização por responsabilidades.
 
-📌 Funcionalidades
+## 📌 Funcionalidades
 👤 Cadastro e autenticação de usuários
 
-🔒 Controle de acesso por tipo de usuário (admin, comum, etc.)
+### 🔒 Controle de acesso por tipo de usuário (admin, comum, etc.)
 
-📁 Gerenciamento de casos clínicos, laudos, relatórios e evidências
+### 📁 Gerenciamento de casos clínicos, laudos, relatórios e evidências
 
 🧾 Geração e listagem de relatórios
 
@@ -14,7 +14,7 @@ Odonto Legal é uma API RESTful desenvolvida em Node.js com Express, voltada par
 
 ✅ Rotas protegidas e organizadas
 
-⚙️ Tecnologias Utilizadas
+## ⚙️ Tecnologias Utilizadas
 Node.js — Runtime JavaScript
 
 Express — Framework para servidor HTTP
@@ -56,7 +56,7 @@ Apenas funções autorizadas acessam determinadas rotas.
 
 Middleware dedicado garante segurança e organização.
 
-🚀 Como Executar o Projeto
+## 🚀 Como Executar o Projeto
 🔧 Pré-requisitos
 Node.js v16+
 
@@ -64,7 +64,7 @@ MongoDB local ou Atlas
 
 Docker (opcional)
 
-📥 Instalação
+## 📥 Instalação
 bash
 Copiar
 Editar
@@ -80,7 +80,7 @@ npm install
 bash
 Copiar
 Editar
-# Para rodar localmente
+## Para rodar localmente
 npm start
 🐳 Com Docker (opcional)
 bash
@@ -96,7 +96,7 @@ Middleware para rotas protegidas
 
 Validação de permissões por papel (role)
 
-📬 Rotas Principais
+## 📬 Rotas Principais
 
 Método	Rota	Descrição
 POST	/auth/login	Login de usuários
