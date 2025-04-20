@@ -18,7 +18,7 @@ module.exports = (req, res, next) => {
     // Garante que os dados estejam completos em req.user
     req.user = {
       id: decoded.id,
-      name: decoded.name,
+      nome: decoded.name,
       perfil: perfilFormatado
     };
 
