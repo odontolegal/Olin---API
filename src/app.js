@@ -26,7 +26,12 @@ const app = express();
 
 // Middlewares globais aplicados a todas as requisições:
 // 1. Permite requisições de outros domínios
-app.use(cors());
+app.use(
+  cors({
+    origin: 'http://127.0.0.1:5500',
+    credentials: true // se algum dia quiser trabalhar com cookies, isso ajuda também
+  })
+);
 
 // 2. Converte automaticamente JSON recebido nas requisições para objetos JS
 app.use(express.json());
