@@ -79,7 +79,7 @@ bash
 Copiar
 Editar
 # Clone o repositório
-git clone https://github.com/seu-usuario/odonto-legal-api.git
+git clone (https://github.com/odontolegal/Olin---API.git)
 
 # Acesse o diretório
 cd odonto-legal-api
