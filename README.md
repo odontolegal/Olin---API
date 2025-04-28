@@ -119,3 +119,5 @@ GET	/relatorios	Acesso a relatórios
 Testes manuais via Postman.
 
 Testes automatizados ainda em desenvolvimento.
+![image](https://github.com/user-attachments/assets/42c54317-357e-4e1f-845b-5e3d97b92cda)
+
