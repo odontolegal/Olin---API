@@ -118,6 +118,40 @@ GET	/relatorios	Acesso a relatórios
 🧪 Testes
 Testes manuais via Postman.
 
+Considerando que a API está rodando em 
+https://case-api-icfc.onrender.com, 
+aqui está a lista completa de endpoints:
+Autenticação (auth.routes.js):
+POST https://case-api-icfc.onrender.com/api/login - Rota de login
+Casos (case.routes.js):
+POST https://case-api-icfc.onrender.com/api/casos - Criar novo caso
+GET https://case-api-icfc.onrender.com/api/casos - Listar todos os casos
+GET https://case-api-icfc.onrender.com/api/casos/:id - Buscar caso por ID (substitua :id pelo ID do caso)
+PUT https://case-api-icfc.onrender.com/api/casos/:id - Editar caso por ID (substitua :id pelo ID do caso)
+DELETE https://case-api-icfc.onrender.com/api/casos/:id - Deletar caso por ID (substitua :id pelo ID do caso)
+Evidências (evidence.routes.js):
+POST https://case-api-icfc.onrender.com/api/evidencias - Criar evidência (com upload de arquivo)
+GET https://case-api-icfc.onrender.com/api/evidencias - Listar evidências por caso
+PUT https://case-api-icfc.onrender.com/api/evidencias/:id - Editar evidência (substitua :id pelo ID da evidência)
+Histórico (historico.routes.js):
+GET https://case-api-icfc.onrender.com/api/historico/caso/:caseId - Listar histórico por caso (substitua :caseId pelo ID do caso)
+GET https://case-api-icfc.onrender.com/api/historico/todos - Listar histórico geral
+Laudo (laudo.routes.js):
+POST https://case-api-icfc.onrender.com/api/laudos - Criar laudo
+Protegido (protected.routes.js):
+GET https://case-api-icfc.onrender.com/api/protegido - Rota protegida (requer token válido)
+Relatório (relatorio.routes.js):
+POST https://case-api-icfc.onrender.com/api/relatorios/:caseId - Criar relatório final para um caso (substitua :caseId pelo ID do caso)
+GET https://case-api-icfc.onrender.com/api/relatorios/:caseId - Buscar relatório final de um caso (substitua :caseId pelo ID do caso)
+GET https://case-api-icfc.onrender.com/api/relatorios/:caseId/pdf - Exportar relatório em PDF (substitua :caseId pelo ID do caso)
+Usuário (user.routes.js):
+POST https://case-api-icfc.onrender.com/api/users - Cadastrar um novo usuário (restrita a administradores)
+GET https://case-api-icfc.onrender.com/api/users - Listar todos os usuários
+GET https://case-api-icfc.onrender.com/api/users/:id - Obter usuário específico
+PUT https://case-api-icfc.onrender.com/api/users/:id - Atualizar usuário
+DELETE https://case-api-icfc.onrender.com/api/users/:id - Deletar usuário
+
+
 Testes automatizados ainda em desenvolvimento.
 ![image](https://github.com/user-attachments/assets/42c54317-357e-4e1f-845b-5e3d97b92cda)
 
